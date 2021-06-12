@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return 'test';
 });
+
+Route::get('/test/{id}', function ($id) {
+    return $id;
+});
