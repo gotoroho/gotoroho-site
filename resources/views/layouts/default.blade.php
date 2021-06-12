@@ -13,9 +13,17 @@
 <body>
 
 <div class="layout">
-    <header class="layout__header">@yield('header')</header>
-    <main class="layout__main">@yield('main')</main>
-    <footer class="layout__footer">@yield('footer')</footer>
+    <header class="layout__header">
+        @include('components.header')
+    </header>
+
+    <main class="layout__main">
+        @yield('content')
+    </main>
+
+    <footer class="layout__footer">
+        @include('components.footer')
+    </footer>
 </div>
 
 <script src="/js/app.js"></script>

@@ -1,0 +1,36 @@
+.brands {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__container {
+        padding: 20px;
+        text-align: center;
+        font-size: 120px;
+        height: 160px;
+    }
+
+    &__icon {
+        transition: filter 2s;
+
+        &:hover {
+            filter: hue-rotate(1turn);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__container {
+            padding: 10px;
+            font-size: 80px;
+            height: 100px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(4, 1fr);
+
+        &__container {
+            font-size: 55px;
+            height: 75px;
+        }
+    }
+}

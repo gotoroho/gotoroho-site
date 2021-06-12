@@ -1,0 +1,15 @@
+.home {
+    &__intro {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    &__black {
+        color: $white;
+        background-color: $black;
+    }
+
+    &__title {
+        text-align: center;
+    }
+}
