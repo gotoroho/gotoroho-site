@@ -1,0 +1,29 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__left {
+        text-align: left;
+    }
+
+    &__center {
+        text-align: center;
+    }
+
+    &__right {
+        text-align: right;
+    }
+
+    &__icon {
+        font-size: 25px;
+        text-decoration: none;
+
+        &::before {
+            color: $black;
+        }
+
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}
