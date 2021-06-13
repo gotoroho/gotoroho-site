@@ -232,11 +232,10 @@
         <div class="wrapper">
             <h2 class="home__title">Список проектов</h2>
 
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+            <ul class="home__project-list project-list">
+                @foreach($projects as $project)
+                    <li>@json($project)</li>
+                @endforeach
             </ul>
         </div>
 
