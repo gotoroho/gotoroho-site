@@ -19,5 +19,5 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('test', function () {
-    dd(Auth::attempt(['email' => 'admin', 'password' => 'admin']));
+    //
 })->purpose('Any test command');
