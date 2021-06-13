@@ -16,3 +16,5 @@ mix
     .setPublicPath("public")
     .js('resources/js/app.js', 'js')
     .sass('resources/scss/app.scss', 'css')
+    .js('resources/js/admin.js', 'js')
+    .sass('resources/scss/admin.scss', 'css')
