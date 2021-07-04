@@ -9,6 +9,8 @@
     <title>{{ $title ?? 'g-admin' }}</title>
 
     <link rel="stylesheet" href="/css/admin.css">
+
+    @include("components.favicons");
 </head>
 <body>
 

@@ -9,6 +9,8 @@
     <title>{{ $title ?? 'gotoroho' }}</title>
 
     <link rel="stylesheet" href="/css/app.css">
+
+    @include("components.favicons");
 </head>
 <body>
 
