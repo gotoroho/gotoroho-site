@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminSkillController;
+use App\Http\Controllers\Admin\AdminSkillGroupController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, "index"])->name('home');
 
 Route::middleware('auth.basic')->group(function() {
-    Route::get('/admin', [AdminController::class, "index"]);
+    Route::get('/admin', [AdminController::class, "index"])->name('admin');
     Route::get('/admin/logout', [AdminController::class, "logout"]);
+
+    Route::put('/admin/skill/{id}', [AdminSkillController::class, 'update'])->name('update-skill');
+
+    Route::post('/admin/skill-group', [AdminSkillGroupController::class, 'create'])->name('create-skill-group');
+    Route::put('/admin/skill-group/{id}', [AdminSkillGroupController::class, 'update'])->name('update-skill-group');
 });
